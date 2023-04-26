@@ -23,20 +23,20 @@ const Hero = () => {
   return (
     <div className="section">
       <div className="container mx-auto px-4">
-        <h1 className="text-8xl text-primary font-bold my-4 tracking-wide">
+        <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
           {`Henlo, I'm Jigs!`}
         </h1>
-        <p className="text-3xl pb-2 tracking-wider">
+        <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider">
           A software engineer capable of empowering
         </p>
-        <p className="text-3xl pb-2 tracking-wider">
+        <p className="text-2xl lg:text-3xl pb-2 tracking-wider">
           businesses with{" "}
           <span className="text-primary font-bold">
             agile <span className="text-white font-normal">and</span> scalable
             solutions.
           </span>
         </p>
-        <div className="flex gap-x-20 my-4 align-top">
+        <div className="flex gap-x-20 my-8 lg:my-4 align-top">
           <SocialLinks />
         </div>
       </div>
@@ -47,10 +47,12 @@ const Contact = () => {
   return (
     <div className="section">
       <div className="text-center container mx-auto px-4">
-        <h1 className="text-8xl text-primary font-bold my-4 tracking-wide">
+        <h1 className="text-6xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
           wuv u.
         </h1>
-        <p className="text-4xl pb-2 tracking-wider">have a nice day, fren.</p>
+        <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
+          have a nice day, fren.
+        </p>
 
         <div className="flex justify-center gap-x-20 my-4 align-top">
           <SocialLinks />
@@ -112,12 +114,12 @@ const Projects = () => {
   ];
   return (
     <div className="section">
-      <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column h-[100vh]">
+      <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column lg:h-[100vh]">
         <div>
-          <h1 className="text-8xl text-primary font-bold mb-6 tracking-wide">
+          <h1 className="text-6xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
             projects
           </h1>
-          <p className="text-4xl tracking-wider">
+          <p className="text-xl lg:text-4xl tracking-wider">
             {`just some that I've worked with.`}
           </p>
         </div>
@@ -145,7 +147,7 @@ export default function Home() {
     <ReactFullpage
       //fullpage options
       credits={{ enabled: false }}
-      licenseKey={""}
+      licenseKey={"YOUR_KEY_HERE"}
       scrollingSpeed={1000} /* Options here */
       render={({ state, fullpageApi }) => {
         return (
