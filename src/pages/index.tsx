@@ -61,6 +61,55 @@ const Contact = () => {
 };
 
 const Projects = () => {
+  const logos = [
+    {
+      image: "therma.svg",
+      alt: "Therma",
+    },
+    {
+      image: "maison-berger-ph.svg",
+      alt: "Maison Berger",
+      classes: "brightness-[500] px-8",
+    },
+    {
+      image: "activelamp.svg",
+      alt: "ActiveLAMP",
+    },
+    {
+      image: "jetpack.svg",
+      alt: "Jetpack",
+      classes: "brightness-[500] px-32",
+    },
+    {
+      image: "ecofoam.png",
+      alt: "Ecofoam",
+      classes: "brightness-200",
+    },
+    {
+      image: "solflex.png",
+      alt: "Solflex",
+    },
+    {
+      image: "techniice-edited.png",
+      alt: "Techniice",
+    },
+    {
+      image: "sunlite.png",
+      alt: "Sunlite",
+    },
+    {
+      image: "solflex-superior.png",
+      alt: "Soflex Superior",
+    },
+    {
+      image: "markee.png",
+      alt: "Markee",
+    },
+    {
+      image: "sunshield.png",
+      alt: "Sunshield",
+    },
+  ];
   return (
     <div className="section">
       <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column h-[100vh]">
@@ -69,73 +118,23 @@ const Projects = () => {
             projects
           </h1>
           <p className="text-4xl tracking-wider">
-            just some brands I've worked with.
+            {`just some that I've worked with.`}
           </p>
         </div>
-        <div className="flex justify-center gap-x-20 my-4 flex-wrap align-top">
-          <Image
-            src={"/logos/sunshield.png"}
-            className="grayscale brightness-[500]"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/maison-berger-ph.webp"}
-            className="grayscale brightness-[500]"
-            width="370"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/ecofoam.png"}
-            className="grayscale brightness-200"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/solflex.png"}
-            className="grayscale brightness-[500]"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/techniice.png"}
-            className="grayscale brightness-200"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/sunlite.png"}
-            className="grayscale brightness-[500]"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/jetpack.svg"}
-            className="grayscale brightness-[500]"
-            width="180"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/solflex-superior.png"}
-            className="grayscale brightness-[500]"
-            width="400"
-            height="100"
-            alt={""}
-          />
-          <Image
-            src={"/logos/markee.png"}
-            className="grayscale brightness-[500]"
-            width="400"
-            height="100"
-            alt={""}
-          />
+        <div className="flex justify-evenly my-4 flex-wrap align-top">
+          {!!logos.length &&
+            logos.map((logo, idx) => (
+              <Image
+                key={`${idx}-${logo}`}
+                src={`/logos/${logo.image}`}
+                className={`grayscale ${
+                  logo.classes ? logo.classes : "brightness-[500]"
+                }`}
+                width="400"
+                height="100"
+                alt={`${logo.alt}`}
+              />
+            ))}
         </div>
       </div>
     </div>
