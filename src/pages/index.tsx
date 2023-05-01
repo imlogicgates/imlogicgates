@@ -23,22 +23,33 @@ const SocialLinks = () => {
 const Hero = () => {
   return (
     <div className="section">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
-          {`Henlo, I'm Jigs!`}
-        </h1>
-        <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider">
-          A software engineer capable of empowering
-        </p>
-        <p className="text-2xl lg:text-3xl pb-2 tracking-wider">
-          businesses with{" "}
-          <span className="text-primary font-bold">
-            agile <span className="text-white font-normal">and</span> scalable
-            solutions.
-          </span>
-        </p>
-        <div className="flex gap-x-20 my-8 lg:my-4 align-top">
-          <SocialLinks />
+      <div className="container mx-auto px-4 block lg:flex justify-between align-middle">
+        <div className="flex flex-col justify-center">
+          <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
+            {`Henlo, I'm Jigs!`}
+          </h1>
+          <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider">
+            A software engineer capable of empowering
+          </p>
+          <p className="text-2xl lg:text-3xl pb-2 tracking-wider">
+            businesses with{" "}
+            <span className="text-primary font-bold">
+              agile <span className="text-white font-normal">and</span> scalable
+              solutions.
+            </span>
+          </p>
+          <p className="pb-6 text-lg tracking-wider">I also love cats.</p>
+          <div className="flex gap-x-20 my-8 lg:my-4 align-top">
+            <SocialLinks />
+          </div>
+        </div>
+        <div className="hidden lg:block">
+          <Image
+            src={"/cats/cat-curled.svg"}
+            width="600"
+            height="50"
+            alt={""}
+          />
         </div>
       </div>
     </div>
@@ -48,6 +59,14 @@ const Contact = () => {
   return (
     <div className="section">
       <div className="text-center container mx-auto px-4">
+        <div className="flex justify-center">
+          <Image
+            src={"/cats/cat-satisfied.svg"}
+            width="500"
+            height="50"
+            alt={""}
+          />
+        </div>
         <h1 className="text-6xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
           wuv u.
         </h1>
@@ -169,42 +188,57 @@ const Tech = () => {
     {
       image: "html.svg",
       alt: "HTML",
+      url: "https://www.testdome.com/certificates/dc1b8124d2fb499480fab0fd17ed0d20",
     },
     {
       image: "css.svg",
       alt: "CSS",
+      url: "https://www.testdome.com/certificates/dc1b8124d2fb499480fab0fd17ed0d20",
     },
     {
       image: "angular.svg",
       alt: "NextJS",
+      url: "",
     },
     {
       image: "js.svg",
       alt: "JavaScript",
+      url: "https://www.testdome.com/certificates/5f54ee70f1894a4aa1bb6783469f32be",
     },
     {
       image: "ts.svg",
       alt: "TypeScript",
+      url: "https://www.testdome.com/certificates/e0be89e891f54e08b5c830f150e48aad",
     },
     {
       image: "react.svg",
       alt: "React",
+      url: "",
+    },
+    {
+      image: "sql.svg",
+      alt: "SQL",
+      url: "https://www.testdome.com/certificates/db6daa553f4a460b8d53b88da4b1baf8",
     },
     {
       image: "github.svg",
       alt: "NextJS",
+      url: "",
     },
     {
       image: "api.svg",
       alt: "API",
+      url: "",
     },
     {
       image: "next.svg",
       alt: "NextJS",
+      url: "",
     },
     {
       image: "vercel.svg",
       alt: "Vercel",
+      url: "",
     },
   ];
   return (
@@ -220,15 +254,16 @@ const Tech = () => {
         </div>
         <div className="flex justify-evenly my-4 flex-wrap align-top">
           {!!logos.length &&
-            logos.map((logo, idx) => (
-              <Image
-                key={`${logo}`}
-                src={`/logos/tech/${logo.image}`}
-                className="invert p-16"
-                width="350"
-                height="100"
-                alt={`${logo.alt}`}
-              />
+            logos.map((logo) => (
+              <Link href={logo.url} target="_blank" key={`${logo}`}>
+                <Image
+                  src={`/logos/tech/${logo.image}`}
+                  className="invert p-16"
+                  width="350"
+                  height="100"
+                  alt={`${logo.alt}`}
+                />
+              </Link>
             ))}
         </div>
       </div>
