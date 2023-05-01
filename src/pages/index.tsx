@@ -1,6 +1,7 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Inter } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -51,7 +52,7 @@ const Contact = () => {
           wuv u.
         </h1>
         <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
-          have a nice day, fren.
+          have a nice day, friend.
         </p>
 
         <div className="flex justify-center gap-x-20 my-4 align-top">
@@ -67,49 +68,68 @@ const Projects = () => {
     {
       image: "therma.svg",
       alt: "Therma",
+      url: "https://www.hellotherma.com",
     },
     {
       image: "maison-berger-ph.svg",
       alt: "Maison Berger",
       classes: "brightness-[500] px-8",
+      url: "https://maison-berger.ph/",
     },
     {
       image: "activelamp.svg",
       alt: "ActiveLAMP",
+      url: "https://www.activelamp.com/",
     },
     {
       image: "jetpack.svg",
       alt: "Jetpack",
       classes: "brightness-[500] px-32",
+      url: "https://jetpack.to/",
+    },
+    {
+      image: "doyo.svg",
+      alt: "Jetpack",
+      classes: "brightness-[500] px-20",
+      url: "https://stage-app.getdoyo.com/",
     },
     {
       image: "ecofoam.png",
       alt: "Ecofoam",
       classes: "brightness-200",
+      url: "https://www.ecofoam.com.ph/",
     },
     {
       image: "solflex.png",
       alt: "Solflex",
+      classes: "brightness-[6]",
+      url: "https://solflex.com.ph/",
     },
     {
       image: "techniice-edited.png",
       alt: "Techniice",
+      url: "https://techniice.com.ph/",
     },
     {
       image: "sunlite.png",
       alt: "Sunlite",
+      url: "https://sunshield.com.ph/products/sunlite-polycarbonate-sheets/",
     },
     {
       image: "solflex-superior.png",
       alt: "Soflex Superior",
+      classes: "brightness-[6]",
+      url: "https://solflex.com.ph/our-brands/solflex-superior-solid-surface/",
     },
     {
       image: "markee.png",
       alt: "Markee",
+      url: "https://solflex.com.ph/our-brands/markee-absolute-quartz-countertop/",
     },
     {
       image: "sunshield.png",
       alt: "Sunshield",
+      url: "https://www.sunshield.com.ph/",
     },
   ];
   return (
@@ -126,13 +146,86 @@ const Projects = () => {
         <div className="flex justify-evenly my-4 flex-wrap align-top">
           {!!logos.length &&
             logos.map((logo, idx) => (
+              <Link key={`${logo}`} href={logo.url}>
+                <Image
+                  src={`/logos/projects/${logo.image}`}
+                  className={`grayscale ${
+                    logo.classes ? logo.classes : "brightness-[500]"
+                  }`}
+                  width="400"
+                  height="100"
+                  alt={`${logo.alt}`}
+                />
+              </Link>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Tech = () => {
+  const logos = [
+    {
+      image: "html.svg",
+      alt: "HTML",
+    },
+    {
+      image: "css.svg",
+      alt: "CSS",
+    },
+    {
+      image: "angular.svg",
+      alt: "NextJS",
+    },
+    {
+      image: "js.svg",
+      alt: "JavaScript",
+    },
+    {
+      image: "ts.svg",
+      alt: "TypeScript",
+    },
+    {
+      image: "react.svg",
+      alt: "React",
+    },
+    {
+      image: "github.svg",
+      alt: "NextJS",
+    },
+    {
+      image: "api.svg",
+      alt: "API",
+    },
+    {
+      image: "next.svg",
+      alt: "NextJS",
+    },
+    {
+      image: "vercel.svg",
+      alt: "Vercel",
+    },
+  ];
+  return (
+    <div className="section">
+      <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column lg:h-[100vh]">
+        <div>
+          <h1 className="text-6xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
+            skills
+          </h1>
+          <p className="text-xl lg:text-4xl tracking-wider">
+            {`just some that I'm confident with.`}
+          </p>
+        </div>
+        <div className="flex justify-evenly my-4 flex-wrap align-top">
+          {!!logos.length &&
+            logos.map((logo, idx) => (
               <Image
-                key={`${idx}-${logo}`}
-                src={`/logos/${logo.image}`}
-                className={`grayscale ${
-                  logo.classes ? logo.classes : "brightness-[500]"
-                }`}
-                width="400"
+                key={`${logo}`}
+                src={`/logos/tech/${logo.image}`}
+                className="invert p-16"
+                width="350"
                 height="100"
                 alt={`${logo.alt}`}
               />
@@ -142,6 +235,7 @@ const Projects = () => {
     </div>
   );
 };
+
 export default function Home() {
   return (
     <ReactFullpage
@@ -153,6 +247,7 @@ export default function Home() {
         return (
           <ReactFullpage.Wrapper>
             <Hero />
+            <Tech />
             <Projects />
             <Contact />
           </ReactFullpage.Wrapper>
