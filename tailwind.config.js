@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
-    "./src/app/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       backgroundImage: {
@@ -13,7 +9,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "#29f3c3",
+        primary: "#1cb955",
         secondary: "#FFF",
       },
     },
