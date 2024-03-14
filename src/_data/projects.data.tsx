@@ -18,7 +18,7 @@ export const projectLogos = [
   {
     image: "jetpack.svg",
     alt: "Jetpack",
-    classes: "brightness-[500] px-12",
+    classes: "brightness-[500] px-20",
     url: "https://jetpack.to/",
   },
   {
@@ -26,6 +26,12 @@ export const projectLogos = [
     alt: "Jetpack",
     classes: "brightness-[500] px-12",
     url: "https://stage-app.getdoyo.com/",
+  },
+  {
+    image: "rentatee.png",
+    alt: "Rentatee",
+    classes: "brightness-200 object-contain",
+    url: "https://rentatee.com/",
   },
   {
     image: "ecofoam.png",
