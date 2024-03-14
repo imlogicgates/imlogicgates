@@ -96,19 +96,37 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-3">
           {!!projectLogos.length &&
-            projectLogos.map((logo, idx) => (
-              <Link key={`${logo.alt}-${idx}`} href={logo.url} className="flex">
-                <Image
-                  src={`/logos/projects/${logo.image}`}
-                  className={`grayscale flex-1 p-4 cursor-pointer ${
-                    logo.classes ? logo.classes : "brightness-[500]"
-                  }`}
-                  width="400"
-                  height="100"
-                  alt={`${logo.alt}`}
-                />
-              </Link>
-            ))}
+            projectLogos.map((logo, idx) =>
+              !logo.url ? (
+                <div className="flex" key={`${logo.alt}-${idx}`}>
+                  <Image
+                    src={`/logos/projects/${logo.image}`}
+                    className={`grayscale flex-1 p-4 ${
+                      logo.classes ? logo.classes : "brightness-[500]"
+                    }`}
+                    width="400"
+                    height="100"
+                    alt={`${logo.alt}`}
+                  />
+                </div>
+              ) : (
+                <Link
+                  key={`${logo.alt}-${idx}`}
+                  href={logo.url}
+                  className="flex"
+                >
+                  <Image
+                    src={`/logos/projects/${logo.image}`}
+                    className={`grayscale flex-1 p-4 cursor-pointer ${
+                      logo.classes ? logo.classes : "brightness-[500]"
+                    }`}
+                    width="400"
+                    height="100"
+                    alt={`${logo.alt}`}
+                  />
+                </Link>
+              )
+            )}
         </div>
       </div>
     </div>
@@ -129,22 +147,34 @@ const Tech = () => {
         </div>
         <div className="grid grid-cols-3">
           {!!techLogos.length &&
-            techLogos.map((logo, idx) => (
-              <Link
-                href={logo.url}
-                target="_blank"
-                key={`${logo.alt}-${idx}`}
-                className="flex"
-              >
-                <Image
-                  src={`/logos/tech/${logo.image}`}
-                  className="invert flex-1 p-8 cursor-pointer"
-                  width="350"
-                  height="100"
-                  alt={`${logo.alt}`}
-                />
-              </Link>
-            ))}
+            techLogos.map((logo, idx) =>
+              logo.url ? (
+                <Link
+                  href={logo.url}
+                  target="_blank"
+                  key={`${logo.alt}-${idx}`}
+                  className="flex"
+                >
+                  <Image
+                    src={`/logos/tech/${logo.image}`}
+                    className="invert flex-1 p-8 cursor-pointer"
+                    width="350"
+                    height="100"
+                    alt={`${logo.alt}`}
+                  />
+                </Link>
+              ) : (
+                <div className="flex" key={`${logo.alt}-${idx}`}>
+                  <Image
+                    src={`/logos/tech/${logo.image}`}
+                    className="invert flex-1 p-8"
+                    width="350"
+                    height="100"
+                    alt={`${logo.alt}`}
+                  />
+                </div>
+              )
+            )}
         </div>
       </div>
     </div>
