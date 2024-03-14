@@ -1,3 +1,4 @@
+import { projectLogos, techLogos } from "@/_data";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { Inter } from "next/font/google";
 import Image from "next/image";
@@ -83,77 +84,9 @@ const Contact = () => {
 };
 
 const Projects = () => {
-  const logos = [
-    {
-      image: "therma.svg",
-      alt: "Therma",
-      url: "https://www.hellotherma.com",
-    },
-    {
-      image: "maison-berger-ph.svg",
-      alt: "Maison Berger",
-      classes: "brightness-[500] px-8",
-      url: "https://maison-berger.ph/",
-    },
-    {
-      image: "activelamp.svg",
-      alt: "ActiveLAMP",
-      url: "https://www.activelamp.com/",
-    },
-    {
-      image: "jetpack.svg",
-      alt: "Jetpack",
-      classes: "brightness-[500] px-32",
-      url: "https://jetpack.to/",
-    },
-    {
-      image: "doyo.svg",
-      alt: "Jetpack",
-      classes: "brightness-[500] px-20",
-      url: "https://stage-app.getdoyo.com/",
-    },
-    {
-      image: "ecofoam.png",
-      alt: "Ecofoam",
-      classes: "brightness-200",
-      url: "https://www.ecofoam.com.ph/",
-    },
-    {
-      image: "solflex.png",
-      alt: "Solflex",
-      classes: "brightness-[6]",
-      url: "https://solflex.com.ph/",
-    },
-    {
-      image: "techniice-edited.png",
-      alt: "Techniice",
-      url: "https://techniice.com.ph/",
-    },
-    {
-      image: "sunlite.png",
-      alt: "Sunlite",
-      url: "https://sunshield.com.ph/products/sunlite-polycarbonate-sheets/",
-    },
-    {
-      image: "solflex-superior.png",
-      alt: "Soflex Superior",
-      classes: "brightness-[6]",
-      url: "https://solflex.com.ph/our-brands/solflex-superior-solid-surface/",
-    },
-    {
-      image: "markee.png",
-      alt: "Markee",
-      url: "https://solflex.com.ph/our-brands/markee-absolute-quartz-countertop/",
-    },
-    {
-      image: "sunshield.png",
-      alt: "Sunshield",
-      url: "https://www.sunshield.com.ph/",
-    },
-  ];
   return (
     <div className="section">
-      <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column lg:h-[100vh]">
+      <div className="container mx-auto  grid grid-cols-2 items-center">
         <div>
           <h1 className="text-6xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
             projects
@@ -162,16 +95,16 @@ const Projects = () => {
             {`just some that I've worked with.`}
           </p>
         </div>
-        <div className="flex justify-evenly my-4 flex-wrap align-top">
-          {!!logos.length &&
-            logos.map((logo, idx) => (
-              <Link key={`${logo}`} href={logo.url}>
+        <div className="grid grid-cols-4">
+          {!!projectLogos.length &&
+            projectLogos.map((logo, idx) => (
+              <Link key={`${logo.alt}-${idx}`} href={logo.url} className="flex">
                 <Image
                   src={`/logos/projects/${logo.image}`}
-                  className={`grayscale ${
+                  className={`grayscale flex-1 p-8 ${
                     logo.classes ? logo.classes : "brightness-[500]"
                   }`}
-                  width="400"
+                  width="350"
                   height="100"
                   alt={`${logo.alt}`}
                 />
@@ -184,66 +117,9 @@ const Projects = () => {
 };
 
 const Tech = () => {
-  const logos = [
-    {
-      image: "html.svg",
-      alt: "HTML",
-      url: "https://www.testdome.com/certificates/dc1b8124d2fb499480fab0fd17ed0d20",
-    },
-    {
-      image: "css.svg",
-      alt: "CSS",
-      url: "https://www.testdome.com/certificates/dc1b8124d2fb499480fab0fd17ed0d20",
-    },
-    {
-      image: "angular.svg",
-      alt: "NextJS",
-      url: "",
-    },
-    {
-      image: "js.svg",
-      alt: "JavaScript",
-      url: "https://www.testdome.com/certificates/5f54ee70f1894a4aa1bb6783469f32be",
-    },
-    {
-      image: "ts.svg",
-      alt: "TypeScript",
-      url: "https://www.testdome.com/certificates/e0be89e891f54e08b5c830f150e48aad",
-    },
-    {
-      image: "react.svg",
-      alt: "React",
-      url: "",
-    },
-    {
-      image: "sql.svg",
-      alt: "SQL",
-      url: "https://www.testdome.com/certificates/db6daa553f4a460b8d53b88da4b1baf8",
-    },
-    {
-      image: "github.svg",
-      alt: "NextJS",
-      url: "",
-    },
-    {
-      image: "api.svg",
-      alt: "API",
-      url: "",
-    },
-    {
-      image: "next.svg",
-      alt: "NextJS",
-      url: "",
-    },
-    {
-      image: "vercel.svg",
-      alt: "Vercel",
-      url: "",
-    },
-  ];
   return (
     <div className="section">
-      <div className="text-center container mx-auto px-4 flex flex-col justify-evenly column lg:h-[100vh]">
+      <div className="container mx-auto  grid grid-cols-2 items-center">
         <div>
           <h1 className="text-6xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
             skills
@@ -252,13 +128,18 @@ const Tech = () => {
             {`just some that I'm confident with.`}
           </p>
         </div>
-        <div className="flex justify-evenly my-4 flex-wrap align-top">
-          {!!logos.length &&
-            logos.map((logo) => (
-              <Link href={logo.url} target="_blank" key={`${logo}`}>
+        <div className="grid grid-cols-4">
+          {!!techLogos.length &&
+            techLogos.map((logo, idx) => (
+              <Link
+                href={logo.url}
+                target="_blank"
+                key={`${logo.alt}-${idx}`}
+                className="flex"
+              >
                 <Image
                   src={`/logos/tech/${logo.image}`}
-                  className="invert p-16"
+                  className="invert flex-1 p-8"
                   width="350"
                   height="100"
                   alt={`${logo.alt}`}
