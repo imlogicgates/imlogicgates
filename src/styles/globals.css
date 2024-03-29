@@ -21,7 +21,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   font-family: "Poppins";
-  background: #121212;
+  background: #272727;
 }
 .fp-watermark {
   display: none;
