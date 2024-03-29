@@ -1,11 +1,10 @@
 import { projectLogos, techLogos } from "@/_data";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { Inter } from "next/font/google";
+import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import Link from "next/link";
-
-const inter = Inter({ subsets: ["latin"] });
-
+import Mail from "../_animations/contact.json";
+import Programmer from "../_animations/programmer.json";
 const SocialLinks = () => {
   return (
     <>
@@ -30,13 +29,13 @@ const SocialLinks = () => {
 const Hero = () => {
   return (
     <div className="section">
-      <div className="container mx-auto px-4 block lg:flex justify-between align-middle">
-        <div className="flex flex-col justify-center gap-y-4">
+      <div className="container overflow-hidden mx-auto px-4 h-screen flex flex-col-reverse justify-evenly align-middle">
+        <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
             {`Henlo, I'm Jigs!`}
           </h1>
           <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider">
-            A software engineer capable of empowering
+            A software developer capable of empowering
           </p>
           <p className="text-2xl lg:text-3xl pb-2 tracking-wider">
             businesses with{" "}
@@ -45,15 +44,18 @@ const Hero = () => {
               solutions.
             </span>
           </p>
-          <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider  font-bold text-primary">
-            I also love cats.
-          </p>
+
           <div className="flex gap-x-20 my-8 lg:my-4 align-top">
             <SocialLinks />
           </div>
         </div>
-        <div className="hidden lg:block">
-          <Image src={"/vectors/mobile.svg"} width="600" height="50" alt={""} />
+        <div className="h-fit scale-125 md:scale-150">
+          <Player
+            autoplay
+            loop
+            src={Programmer}
+            className="block w-fit h-fit"
+          />
         </div>
       </div>
     </div>
@@ -62,20 +64,22 @@ const Hero = () => {
 const Contact = () => {
   return (
     <div className="section">
-      <div className="text-center container mx-auto px-4">
-        <div className="flex justify-center">
-          <Image src={"/vectors/tags.svg"} width="500" height="40" alt={""} />
+      <div className="text-center container mx-auto px-4 flex flex-wrap flex-row jusitfy-between items-center">
+        <div className="flex flex-col m-auto items-center justify-center w-full md:w-1/2">
+          <Player autoplay loop src={Mail} className="block  w-fit h-fit" />
         </div>
-        <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
-          {`get in touch`}
-        </h1>
-        <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
-          {`let's bring your
+        <div className="flex flex-col gap-y-4">
+          <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
+            {`get in touch`}
+          </h1>
+          <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
+            {`let's bring your
           ideas to life!`}
-        </p>
+          </p>
 
-        <div className="flex justify-center gap-x-20 my-4 align-top">
-          <SocialLinks />
+          <div className="flex justify-center gap-x-20 my-4 align-top">
+            <SocialLinks />
+          </div>
         </div>
       </div>
     </div>
