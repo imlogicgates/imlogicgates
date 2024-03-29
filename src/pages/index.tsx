@@ -3,7 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import Link from "next/link";
-import Mail from "../_animations/contact.json";
+import Code from "../_animations/code.json";
 import Programmer from "../_animations/programmer.json";
 const SocialLinks = () => {
   return (
@@ -63,12 +63,12 @@ const Hero = () => {
 };
 const Contact = () => {
   return (
-    <div className="section">
-      <div className="text-center container mx-auto px-4 flex flex-wrap flex-row jusitfy-between items-center">
-        <div className="flex flex-col m-auto items-center justify-center w-full md:w-1/2">
-          <Player autoplay loop src={Mail} className="block  w-fit h-fit" />
+    <div className="section bg-[#0e352d] h-screen m-auto overflow-hidden">
+      <div className="text-center container mx-auto px-4 flex flex-row flex-wrap jusitfy-between items-center md:gap-10">
+        <div className="flex flex-col m-auto items-center justify-center  md:w-1/2  md:scale-100">
+          <Player autoplay loop src={Code} className="block  w-fit h-fit" />
         </div>
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col items-center justify-center m-auto gap-y-4">
           <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
             {`get in touch`}
           </h1>
