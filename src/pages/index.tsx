@@ -29,7 +29,7 @@ const SocialLinks = () => {
 const Hero = () => {
   return (
     <div className="section">
-      <div className="container overflow-hidden mx-auto px-4 h-screen flex flex-col-reverse justify-evenly align-middle">
+      <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
         <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
             {`Henlo, I'm Jigs!`}
