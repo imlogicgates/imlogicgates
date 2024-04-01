@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+        <title>Imlogicgates | Software Development</title>
       </Head>
       <body>
         <Main />
