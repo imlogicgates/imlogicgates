@@ -34,10 +34,10 @@ const Hero = () => {
           <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
             {`Henlo, I'm Jigs!`}
           </h1>
-          <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 tracking-wider">
+          <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 text-white  tracking-wider">
             A software developer capable of empowering
           </p>
-          <p className="text-2xl lg:text-3xl pb-2 tracking-wider">
+          <p className="text-2xl text-white lg:text-3xl pb-2 tracking-wider">
             businesses with{" "}
             <span className="text-primary font-bold">
               agile <span className="text-white font-normal">and</span> scalable
@@ -64,13 +64,13 @@ const Hero = () => {
 const Contact = () => {
   return (
     <div className="section bg-[#0e352d] h-screen m-auto overflow-hidden">
-      <div className="text-center container mx-auto px-4 flex flex-row flex-wrap jusitfy-between items-center md:gap-10">
+      <div className="text-center container mx-auto px-4 flex flex-row-reverse flex-wrap jusitfy-between items-center md:gap-10">
         <div className="flex flex-col m-auto items-center justify-center  md:w-1/2  md:scale-100">
           <Player autoplay loop src={Code} className="block  w-fit h-fit" />
         </div>
         <div className="flex flex-col items-center justify-center m-auto gap-y-4">
           <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
-            {`get in touch`}
+            {`get in touch.`}
           </h1>
           <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
             {`let's bring your
@@ -89,23 +89,23 @@ const Contact = () => {
 const Projects = () => {
   return (
     <div className="section">
-      <div className="container px-4 mx-auto grid md:grid-cols-2  gap-10 items-center">
-        <div className="text-center md:text-left">
+      <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
+        <div className="flex-1 text-center lg:text-right">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
-            projects
+            projects.
           </h1>
           <p className="text-md lg:text-4xl tracking-wider">
             {`sharing some of my collaborative endeavors.`}
           </p>
         </div>
-        <div className="grid grid-cols-3">
+        <div className="flex-1 grid grid-cols-3 gap-y-4">
           {!!projectLogos.length &&
             projectLogos.map((logo, idx) =>
               !logo.url ? (
                 <div className="flex" key={`${logo.alt}-${idx}`}>
                   <Image
                     src={`/logos/projects/${logo.image}`}
-                    className={`grayscale flex-1 p-4 ${
+                    className={`grayscale flex-1 md:p-4 ${
                       logo.classes ? logo.classes : "brightness-[500]"
                     }`}
                     width="400"
@@ -121,7 +121,7 @@ const Projects = () => {
                 >
                   <Image
                     src={`/logos/projects/${logo.image}`}
-                    className={`grayscale flex-1 p-4 cursor-pointer ${
+                    className={`grayscale flex-1 md:p-4 p-0 cursor-pointer ${
                       logo.classes ? logo.classes : "brightness-[500]"
                     }`}
                     width="400"
@@ -140,10 +140,10 @@ const Projects = () => {
 const Tech = () => {
   return (
     <div className="section">
-      <div className="container px-4 mx-auto grid md:grid-cols-2 gap-10 items-center">
-        <div className="text-center md:text-left">
-          <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
-            skills
+      <div className="container px-4 mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        <div className="text-center lg:text-left">
+          <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
+            skills.
           </h1>
           <p className="text-md lg:text-4xl tracking-wider leading-relaxed">
             {`refined expertise from over 7 years of experience.`}
