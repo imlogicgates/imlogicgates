@@ -72,7 +72,7 @@ const Contact = () => {
           <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
             {`get in touch.`}
           </h1>
-          <p className="text-2xl lg:text-4xl pb-2 tracking-wider">
+          <p className="text-2xl text-white lg:text-4xl pb-2 tracking-wider">
             {`let's bring your
           ideas to life!`}
           </p>
@@ -94,7 +94,7 @@ const Projects = () => {
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
             projects.
           </h1>
-          <p className="text-md lg:text-4xl tracking-wider">
+          <p className="text-md lg:text-4xl tracking-wider text-white">
             {`sharing some of my collaborative endeavors.`}
           </p>
         </div>
@@ -145,7 +145,7 @@ const Tech = () => {
           <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
             skills.
           </h1>
-          <p className="text-md lg:text-4xl tracking-wider leading-relaxed">
+          <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
             {`refined expertise from over 7 years of experience.`}
           </p>
         </div>
