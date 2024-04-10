@@ -1,7 +1,7 @@
 <h1 align="center">Henlo 👋, I'm Jigs</h1>
 <h3 align="center">Software Developer</h3>
 
-- 👨‍💻 Portfolio **[https://www.imlogicgates.com/](https://www.imlogicgates.com/)**
+- 👨‍💻 Personal Online Hub **[https://www.imlogicgates.com/](https://www.imlogicgates.com/)**
 
 - 📫 How to reach me **jigs@imlogicgates.com**
 
