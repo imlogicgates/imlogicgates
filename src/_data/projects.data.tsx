@@ -24,6 +24,12 @@ export const projectLogos = [
     url: "https://jetpack.to/",
   },
   {
+    image: "sproutsheet.png",
+    alt: "Sproutsheets",
+    classes: "brightness-[500] px-6 md:px-14",
+    url: "https://sproutsheets.com/",
+  },
+  {
     image: "doyo.svg",
     alt: "Doyo",
     classes: "brightness-[500] px-4 md:px-8",
