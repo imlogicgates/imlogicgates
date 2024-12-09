@@ -32,12 +32,13 @@ const Hero = () => {
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
         <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
-            {`Henlo, I'm Jigs!`}
+            <span className="text-white">Hey there,</span>
+            {` I'm Jigs!`}
           </h1>
-          <p className="text-2xl lg:text-3xl pb-4 lg:pb-2 text-white  tracking-wider">
+          <p className="text-2xl lg:text-3xl pb-1 text-white  tracking-wider">
             A software developer capable of empowering
           </p>
-          <p className="text-2xl text-white lg:text-3xl pb-2 tracking-wider">
+          <p className="text-2xl text-white lg:text-3xl pb-1 tracking-wider">
             businesses with{" "}
             <span className="text-primary font-bold">
               agile <span className="text-white font-normal">and</span> scalable
@@ -91,14 +92,14 @@ const Projects = () => {
     <div className="section">
       <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
         <div className="flex-1 text-center lg:text-right">
-          <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
+          <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             projects.
           </h1>
           <p className="text-md lg:text-4xl tracking-wider text-white">
             {`sharing some of my collaborative endeavors.`}
           </p>
         </div>
-        <div className="flex-1 grid grid-cols-3 gap-y-4">
+        <div className="flex-1 grid grid-cols-3 gap-y-4 md:px-16">
           {!!projectLogos.length &&
             projectLogos.map((logo, idx) =>
               !logo.url ? (
@@ -108,7 +109,7 @@ const Projects = () => {
                     className={`grayscale flex-1 md:p-4 ${
                       logo.classes ? logo.classes : "brightness-[500]"
                     }`}
-                    width="400"
+                    width="200"
                     height="100"
                     alt={`${logo.alt}`}
                   />
@@ -124,7 +125,7 @@ const Projects = () => {
                     className={`grayscale flex-1 md:p-4 p-0 cursor-pointer ${
                       logo.classes ? logo.classes : "brightness-[500]"
                     }`}
-                    width="400"
+                    width="200"
                     height="100"
                     alt={`${logo.alt}`}
                   />
@@ -142,14 +143,14 @@ const Tech = () => {
     <div className="section">
       <div className="container px-4 mx-auto grid lg:grid-cols-2 gap-10 items-center">
         <div className="text-center lg:text-left">
-          <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-6 tracking-wide">
+          <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             skills.
           </h1>
           <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
             {`refined expertise from over 7 years of experience.`}
           </p>
         </div>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 md:px-16">
           {!!techLogos.length &&
             techLogos.map((logo, idx) =>
               logo.url ? (
@@ -161,9 +162,9 @@ const Tech = () => {
                 >
                   <Image
                     src={`/logos/tech/${logo.image}`}
-                    className="invert flex-1 p-8 cursor-pointer"
-                    width="350"
-                    height="100"
+                    className="invert flex-1 p-4 md:p-10 cursor-pointer"
+                    width="100"
+                    height="50"
                     alt={`${logo.alt}`}
                   />
                 </Link>
@@ -171,9 +172,9 @@ const Tech = () => {
                 <div className="flex" key={`${logo.alt}-${idx}`}>
                   <Image
                     src={`/logos/tech/${logo.image}`}
-                    className="invert flex-1 p-8"
-                    width="350"
-                    height="100"
+                    className="invert flex-1 p-4 md:p-10"
+                    width="100"
+                    height="50"
                     alt={`${logo.alt}`}
                   />
                 </div>

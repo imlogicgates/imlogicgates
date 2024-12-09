@@ -8,25 +8,25 @@ export const projectLogos = [
   {
     image: "maison-berger-ph.svg",
     alt: "Maison Berger",
-    classes: "brightness-[500] px-2 md:px-8",
+    classes: "brightness-[500] px-4 md:px-8",
     url: "https://maison-berger.ph/",
   },
   {
     image: "activelamp.svg",
     alt: "ActiveLAMP",
     url: "https://www.activelamp.com/",
-    classes: "brightness-[500] px-2",
+    classes: "brightness-[500] px-4",
   },
   {
     image: "jetpack.svg",
     alt: "Jetpack",
-    classes: "brightness-[500] px-8 md:px-20",
+    classes: "brightness-[500] px-8 md:px-16",
     url: "https://jetpack.to/",
   },
   {
     image: "doyo.svg",
-    alt: "Jetpack",
-    classes: "brightness-[500] px-4 md:px-12",
+    alt: "Doyo",
+    classes: "brightness-[500] px-4 md:px-8",
     url: "https://stage-app.getdoyo.com/",
   },
   {
