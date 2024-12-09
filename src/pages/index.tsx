@@ -31,14 +31,14 @@ const Hero = () => {
     <div className="section">
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
         <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
-          <h1 className="text-4xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
+          <h1 className="text-2xl lg:text-7xl text-primary font-bold my-4 tracking-wide">
             <span className="text-white">Hey there,</span>
             {` I'm Jigs!`}
           </h1>
-          <p className="text-2xl lg:text-3xl pb-1 text-white  tracking-wider">
+          <p className="text-xl text-center lg:text-3xl pb-1 text-white  tracking-wider">
             A software developer capable of empowering
           </p>
-          <p className="text-2xl text-white lg:text-3xl pb-1 tracking-wider">
+          <p className="text-xl text-center text-white lg:text-3xl pb-1 tracking-wider">
             businesses with{" "}
             <span className="text-primary font-bold">
               agile <span className="text-white font-normal">and</span> scalable
@@ -46,7 +46,7 @@ const Hero = () => {
             </span>
           </p>
 
-          <div className="flex gap-x-20 my-8 lg:my-4 align-top">
+          <div className="flex gap-x-10 md:gap-x-20 my-8 px-4 lg:my-4 align-top">
             <SocialLinks />
           </div>
         </div>
@@ -65,20 +65,20 @@ const Hero = () => {
 const Contact = () => {
   return (
     <div className="section bg-[#0e352d] h-screen m-auto overflow-hidden">
-      <div className="text-center container mx-auto px-4 flex flex-row-reverse flex-wrap jusitfy-between items-center md:gap-10">
-        <div className="flex flex-col m-auto items-center justify-center  md:w-1/2  md:scale-100">
+      <div className="text-center container mx-auto px-4 flex flex-row-reverse flex-wrap jusitfy-between items-center md:flex-col">
+        <div className="flex flex-col m-auto items-center justify-center md:w-5/12">
           <Player autoplay loop src={Code} className="block  w-fit h-fit" />
         </div>
-        <div className="flex flex-col items-center justify-center m-auto gap-y-4">
-          <h1 className="text-5xl lg:text-8xl text-primary font-bold my-4 tracking-wide">
+        <div className="flex flex-col items-center justify-center m-auto md:gap-y-4">
+          <h1 className="text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
             {`get in touch.`}
           </h1>
-          <p className="text-2xl text-white lg:text-4xl pb-2 tracking-wider">
+          <p className="text-lg text-white lg:text-4xl tracking-wider">
             {`let's bring your
           ideas to life!`}
           </p>
 
-          <div className="flex justify-center gap-x-20 my-4 align-top">
+          <div className="flex gap-x-10 md:gap-x-20 my-8 px-4 lg:my-4 align-top">
             <SocialLinks />
           </div>
         </div>
