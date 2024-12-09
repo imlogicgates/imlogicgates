@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Code from "../_animations/code.json";
 import Programmer from "../_animations/programmer.json";
+import WindLine from "../_animations/wind-line.json";
 const SocialLinks = () => {
   return (
     <>
@@ -69,7 +70,13 @@ const Contact = () => {
         <div className="flex flex-col m-auto items-center justify-center md:w-5/12">
           <Player autoplay loop src={Code} className="block  w-fit h-fit" />
         </div>
-        <div className="flex flex-col items-center justify-center m-auto md:gap-y-4">
+        <div className="relative flex flex-col items-center justify-center m-auto md:gap-y-4">
+          <Player
+            autoplay
+            loop
+            src={WindLine}
+            className="absolute top-0 -left-5 opacity-50 w-fit h-fit"
+          />
           <h1 className="text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
             {`get in touch.`}
           </h1>
