@@ -73,6 +73,7 @@ const Contact = () => {
         <div className="relative flex flex-col items-center justify-center m-auto md:gap-y-4">
           <Player
             autoplay
+            speed={0.4}
             loop
             src={WindLine}
             className="absolute top-0 -left-5 opacity-50 w-fit h-fit"
@@ -98,11 +99,12 @@ const Projects = () => {
   return (
     <div className="section">
       <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
-        <div className="flex-1 text-center lg:text-right">
+        <div className="relative flex-1 text-center lg:text-right">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             projects.
           </h1>
-          <p className="text-md lg:text-4xl tracking-wider text-white">
+
+          <p className="relative text-md lg:text-4xl tracking-wider text-white">
             {`sharing some of my collaborative endeavors.`}
           </p>
         </div>
