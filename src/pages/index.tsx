@@ -103,11 +103,11 @@ const Projects = () => {
             projects.
           </h1>
 
-          <p className="relative text-md lg:text-4xl tracking-wider text-white">
-            {`sharing some of my collaborative endeavors.`}
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
+            {`collaborations that matter.`}
           </p>
         </div>
-        <div className="flex-1 grid grid-cols-3 gap-y-4 md:px-16">
+        <div className="flex-1 grid grid-cols-3 gap-y-4 px-4 sm:px-16 md:px-4">
           {!!projectLogos.length &&
             projectLogos.map((logo, idx) =>
               !logo.url ? (
@@ -154,11 +154,11 @@ const Skills = () => {
           <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             skills.
           </h1>
-          <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
-            {`refined expertise from over 7 years of experience.`}
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
+            {`8 years and counting.`}
           </p>
         </div>
-        <div className="grid grid-cols-3 md:px-16">
+        <div className="flex-1 grid grid-cols-3 gap-y-4 px-4 sm:px-12 md:px-16">
           {!!techLogos.length &&
             techLogos.map((logo, idx) =>
               logo.url ? (
@@ -171,8 +171,8 @@ const Skills = () => {
                   <Image
                     src={`/logos/tech/${logo.image}`}
                     className="invert brightness-0 flex-1 p-4 md:p-10 cursor-pointer"
-                    width="100"
-                    height="50"
+                    width="75"
+                    height="35"
                     alt={`${logo.alt}`}
                   />
                 </Link>
