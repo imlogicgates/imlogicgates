@@ -26,13 +26,13 @@ export const projectLogos = [
   {
     image: "jetpack.svg",
     alt: "Jetpack",
-    classes: "brightness-[500] px-8 md:px-16",
+    classes: "brightness-[500] px-8 md:px-10 xl:px-16",
     url: "https://jetpack.to/",
   },
   {
     image: "sproutsheet.png",
     alt: "Sproutsheets",
-    classes: "brightness-[500] px-6 md:px-14",
+    classes: "brightness-[500] px-8 md:px-8 xl:px-14",
     url: "https://sproutsheets.com/",
   },
   {
