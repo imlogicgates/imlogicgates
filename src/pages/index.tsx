@@ -108,7 +108,10 @@ const Projects = () => {
             {`sharing some of my collaborative endeavors.`}
           </p>
         </div>
-        <div className="flex-1 grid grid-cols-3 gap-y-4 md:px-16">
+        <div
+          className="flex-4
+         grid grid-cols-3 gap-y-4 md:px-16"
+        >
           {!!projectLogos.length &&
             projectLogos.map((logo, idx) =>
               !logo.url ? (
@@ -150,45 +153,49 @@ const Projects = () => {
 const Tech = () => {
   return (
     <div className="section">
-      <div className="container px-4 mx-auto grid lg:grid-cols-2 gap-10 items-center">
-        <div className="text-center lg:text-left">
-          <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
-            skills.
-          </h1>
-          <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
-            {`refined expertise from over 7 years of experience.`}
-          </p>
+      <div className="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+        <div className="lg:col-span-2">
+          <div className="text-center w-full lg:text-left">
+            <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
+              skills.
+            </h1>
+            <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
+              {`Refined expertise from over 7 years of experience.`}
+            </p>
+          </div>
         </div>
-        <div className="grid grid-cols-3 md:px-16">
-          {!!techLogos.length &&
-            techLogos.map((logo, idx) =>
-              logo.url ? (
-                <Link
-                  href={logo.url}
-                  target="_blank"
-                  key={`${logo.alt}-${idx}`}
-                  className="flex"
-                >
-                  <Image
-                    src={`/logos/tech/${logo.image}`}
-                    className="brightness-0 invert flex-1 p-4 md:p-10 cursor-pointer"
-                    width="100"
-                    height="50"
-                    alt={`${logo.alt}`}
-                  />
-                </Link>
-              ) : (
-                <div className="flex" key={`${logo.alt}-${idx}`}>
-                  <Image
-                    src={`/logos/tech/${logo.image}`}
-                    className="invert flex-1 p-4 md:p-10"
-                    width="100"
-                    height="50"
-                    alt={`${logo.alt}`}
-                  />
-                </div>
-              )
-            )}
+        <div className="lg:col-span-3">
+          <div className="grid grid-cols-3 md:px-16">
+            {!!techLogos.length &&
+              techLogos.map((logo, idx) =>
+                logo.url ? (
+                  <Link
+                    href={logo.url}
+                    target="_blank"
+                    key={`${logo.alt}-${idx}`}
+                    className="flex"
+                  >
+                    <Image
+                      src={`/logos/tech/${logo.image}`}
+                      className="brightness-0 invert flex-1 p-4 md:p-10 cursor-pointer"
+                      width="100"
+                      height="50"
+                      alt={`${logo.alt}`}
+                    />
+                  </Link>
+                ) : (
+                  <div className="flex" key={`${logo.alt}-${idx}`}>
+                    <Image
+                      src={`/logos/tech/${logo.image}`}
+                      className="invert flex-1 p-4 md:p-10"
+                      width="100"
+                      height="50"
+                      alt={`${logo.alt}`}
+                    />
+                  </div>
+                )
+              )}
+          </div>
         </div>
       </div>
     </div>
