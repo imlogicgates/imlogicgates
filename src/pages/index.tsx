@@ -30,22 +30,18 @@ const Hero = () => {
   return (
     <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
-        <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
-          <h1 className="text-2xl lg:text-7xl text-primary font-bold my-4 tracking-wide">
-            <span className="text-white">Hey there,</span>
-            {` I'm Jigs!`}
+        <div className="flex flex-col items-center justify-center gap-y-2 max-h-3/4">
+          <h1 className="text-2xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
+            <span className="text-white font-bold">{`<`}</span>
+            imlogicgates
+            <span className="text-white font-bold">{`/>`}</span>
           </h1>
-          <p className="text-xl text-center lg:text-3xl pb-1 text-white  tracking-wider">
-            A software developer capable of empowering
-          </p>
-          <p className="text-xl text-center text-white lg:text-3xl pb-1 tracking-wider">
-            businesses with{" "}
-            <span className="text-primary font-bold">
-              agile <span className="text-white font-normal">and</span> scalable
-              solutions.
-            </span>
-          </p>
 
+          <p className="text-xl text-center lg:text-3xl pb-1 text-white  tracking-wider">
+            Architecting digital solutions that
+            <br className="hidden sm:block" /> accelerate
+            <span className="text-primary font-bold"> business success.</span>
+          </p>
           <div className="flex gap-x-10 md:gap-x-20 my-8 px-4 lg:my-4 align-top">
             <SocialLinks />
           </div>
