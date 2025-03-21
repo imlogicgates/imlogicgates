@@ -12,7 +12,7 @@ export const techLogos = [
   {
     image: "angular.svg",
     alt: "NextJS",
-    url: "https://www.testdome.com/certificates/dc1b8124d2fb499480fab0fd17ed0d20",
+    url: "https://www.testdome.com/certificates/2effcfabbc6a41fd83811363a635caf5",
   },
   {
     image: "js.svg",
@@ -27,7 +27,7 @@ export const techLogos = [
   {
     image: "react.svg",
     alt: "React",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
   {
     image: "sql.svg",
