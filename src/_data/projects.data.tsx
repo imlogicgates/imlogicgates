@@ -39,7 +39,7 @@ export const projectLogos = [
     image: "doyo.svg",
     alt: "Doyo",
     classes: "brightness-[500] px-4 md:px-8",
-    url: "https://stage-app.getdoyo.com/",
+    url: "https://getdoyo.app/",
   },
   {
     image: "rentatee.png",
