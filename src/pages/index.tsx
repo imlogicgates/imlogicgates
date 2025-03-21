@@ -1,5 +1,4 @@
 import { projectLogos, techLogos } from "@/_data";
-import ReactFullpage from "@fullpage/react-fullpage";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,7 +28,7 @@ const SocialLinks = () => {
 };
 const Hero = () => {
   return (
-    <div className="section">
+    <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
         <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
           <h1 className="text-2xl lg:text-7xl text-primary font-bold my-4 tracking-wide">
@@ -60,12 +59,12 @@ const Hero = () => {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 const Contact = () => {
   return (
-    <div className="section bg-[#0e352d] h-screen m-auto overflow-hidden">
+    <section className="overflow-hidden flex items-center justify-center w-full h-screen bg-[#0e352d] snap-start relative">
       <div className="text-center container mx-auto px-4 flex flex-row-reverse flex-wrap jusitfy-between items-center md:flex-col">
         <div className="flex flex-col m-auto items-center justify-center md:w-5/12">
           <Player autoplay loop src={Code} className="block  w-fit h-fit" />
@@ -91,13 +90,13 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const Projects = () => {
   return (
-    <div className="section">
+    <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
         <div className="relative flex-1 text-center lg:text-right">
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
@@ -143,13 +142,13 @@ const Projects = () => {
             )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-const Tech = () => {
+const Skills = () => {
   return (
-    <div className="section">
+    <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container px-4 mx-auto grid lg:grid-cols-2 gap-10 items-center">
         <div className="text-center lg:text-left">
           <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
@@ -191,27 +190,17 @@ const Tech = () => {
             )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default function Home() {
   return (
-    <ReactFullpage
-      //fullpage options
-      credits={{ enabled: false }}
-      licenseKey={"YOUR_KEY_HERE"}
-      scrollingSpeed={1000} /* Options here */
-      render={({ state, fullpageApi }) => {
-        return (
-          <ReactFullpage.Wrapper>
-            <Hero />
-            <Tech />
-            <Projects />
-            <Contact />
-          </ReactFullpage.Wrapper>
-        );
-      }}
-    />
+    <main className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
+      <Hero />
+      <Skills />
+      <Projects />
+      <Contact />
+    </main>
   );
 }
