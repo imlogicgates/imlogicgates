@@ -80,7 +80,7 @@ const Contact = () => {
           <h1 className="text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
             {`get in touch.`}
           </h1>
-          <p className="text-lg text-white lg:text-4xl tracking-wider">
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
             {`let's bring your
           ideas to life!`}
           </p>
@@ -102,9 +102,8 @@ const Projects = () => {
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             projects.
           </h1>
-
           <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
-            {`collaborations that matter.`}
+            collaborations that matter.
           </p>
         </div>
         <div className="flex-1 grid grid-cols-3 gap-y-4 px-4 sm:px-16 md:px-4">
