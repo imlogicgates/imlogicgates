@@ -161,7 +161,7 @@ const Tech = () => {
           </div>
         </div>
         <div className="col-span-1 lg:col-span-7">
-          <div className="grid grid-cols-3 sm:grid-cols-4 px-4 md:px-16">
+          <div className="grid grid-cols-3 md:grid-cols-4 px-4 md:px-16">
             {!!techLogos.length &&
               techLogos.map((logo, idx) =>
                 logo.url ? (
@@ -173,7 +173,7 @@ const Tech = () => {
                   >
                     <Image
                       src={`/logos/tech/${logo.image}`}
-                      className="brightness-0 invert flex-1 p-3 sm:p-5 xl:p-10 cursor-pointer"
+                      className="brightness-0 invert flex-1 p-4 sm:p-8 xl:p-10 cursor-pointer"
                       width="100"
                       height="50"
                       alt={`${logo.alt}`}
@@ -183,7 +183,7 @@ const Tech = () => {
                   <div className="flex" key={`${logo.alt}-${idx}`}>
                     <Image
                       src={`/logos/tech/${logo.image}`}
-                      className="invert flex-1 p-3 sm:p-5 xl:p-10"
+                      className="invert flex-1 p-4 sm:p-8 xl:p-10"
                       width="100"
                       height="50"
                       alt={`${logo.alt}`}
