@@ -41,8 +41,8 @@ export const techLogos = [
   },
   {
     image: "api.svg",
-    alt: "API",
-    url: "",
+    alt: "Rest API",
+    url: "https://www.testdome.com/certificates/340463b95f4545838e67857196afe9f3",
   },
   {
     image: "next.svg",
