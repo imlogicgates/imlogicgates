@@ -30,22 +30,18 @@ const Hero = () => {
   return (
     <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
-        <div className="flex flex-col items-center justify-center gap-y-4 max-h-3/4">
-          <h1 className="text-2xl lg:text-7xl text-primary font-bold my-4 tracking-wide">
-            <span className="text-white">Hey there,</span>
-            {` I'm Jigs!`}
+        <div className="flex flex-col items-center justify-center gap-y-2 max-h-3/4">
+          <h1 className="text-3xl md:text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
+            <span className="text-white font-bold">{`<`}</span>
+            imlogicgates
+            <span className="text-white font-bold">{`/>`}</span>
           </h1>
-          <p className="text-xl text-center lg:text-3xl pb-1 text-white  tracking-wider">
-            A software developer capable of empowering
-          </p>
-          <p className="text-xl text-center text-white lg:text-3xl pb-1 tracking-wider">
-            businesses with{" "}
-            <span className="text-primary font-bold">
-              agile <span className="text-white font-normal">and</span> scalable
-              solutions.
-            </span>
-          </p>
 
+          <p className="text-xl text-center md:text-2xl lg:text-3xl pb-1 text-white  tracking-wider">
+            Architecting digital solutions that
+            <br className="hidden sm:block" /> accelerate
+            <span className="text-primary font-bold"> business success.</span>
+          </p>
           <div className="flex gap-x-10 md:gap-x-20 my-8 px-4 lg:my-4 align-top">
             <SocialLinks />
           </div>
@@ -80,7 +76,7 @@ const Contact = () => {
           <h1 className="text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
             {`get in touch.`}
           </h1>
-          <p className="text-lg text-white lg:text-4xl tracking-wider">
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
             {`let's bring your
           ideas to life!`}
           </p>
@@ -102,12 +98,11 @@ const Projects = () => {
           <h1 className="text-4xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             projects.
           </h1>
-
-          <p className="relative text-md lg:text-4xl tracking-wider text-white">
-            {`sharing some of my collaborative endeavors.`}
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
+            collaborations that matter.
           </p>
         </div>
-        <div className="flex-1 grid grid-cols-3 gap-y-4 md:px-16">
+        <div className="flex-1 grid grid-cols-3 gap-y-4 px-4 sm:px-16 md:px-4">
           {!!projectLogos.length &&
             projectLogos.map((logo, idx) =>
               !logo.url ? (
@@ -154,11 +149,11 @@ const Skills = () => {
           <h1 className="text-4xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
             skills.
           </h1>
-          <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
-            {`refined expertise from over 7 years of experience.`}
+          <p className="text-2xl lg:text-4xl tracking-wider text-white leading-relaxed">
+            {`8 years and counting.`}
           </p>
         </div>
-        <div className="grid grid-cols-3 md:px-16">
+        <div className="flex-1 grid grid-cols-3 gap-y-4 px-4 sm:px-12 md:px-16">
           {!!techLogos.length &&
             techLogos.map((logo, idx) =>
               logo.url ? (
@@ -171,8 +166,8 @@ const Skills = () => {
                   <Image
                     src={`/logos/tech/${logo.image}`}
                     className="invert brightness-0 flex-1 p-4 md:p-10 cursor-pointer"
-                    width="100"
-                    height="50"
+                    width="75"
+                    height="35"
                     alt={`${logo.alt}`}
                   />
                 </Link>
