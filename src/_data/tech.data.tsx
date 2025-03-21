@@ -32,7 +32,7 @@ export const techLogos = [
   {
     image: "react-native.svg",
     alt: "React Native",
-    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
+    url: "https://www.testdome.com/certificates/13b18039a9f64d088d42c25a792b226b",
   },
   {
     image: "sql.svg",
