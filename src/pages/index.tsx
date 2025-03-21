@@ -151,7 +151,7 @@ const Projects = () => {
     <div className="section">
       <div className="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-10 gap-10 items-center">
         <div className="col-span-1 lg:col-span-7">
-          <div className="grid grid-cols-3 px-4 md:px-16">
+          <div className="grid grid-cols-3 md:grid-cols-4 px-4 md:px-16">
             {!!projectLogos.length &&
               projectLogos.map((logo, idx) =>
                 !logo.url ? (
@@ -188,7 +188,7 @@ const Projects = () => {
         </div>
         <div className="col-span-1 lg:col-span-3">
           <div className="text-center w-full lg:text-right">
-            <h1 className="text-4xl md:text-6xl drop-shadow-2xl xl:text-8xl text-primary font-bold mb-2 tracking-wide">
+            <h1 className="text-4xl lg:text-6xl drop-shadow-2xl xl:text-8xl text-primary font-bold mb-2 tracking-wide">
               projects.
             </h1>
             <p className="text-lg lg:text-2xl tracking-wider text-white lg:!leading-[3rem]">
@@ -215,7 +215,7 @@ const Tech = () => {
           </div>
         </div>
         <div className="col-span-1 lg:col-span-7">
-          <div className="grid grid-cols-3 px-4 md:px-16">
+          <div className="grid grid-cols-3 md:grid-cols-4 px-4 md:px-16">
             {!!techLogos.length &&
               techLogos.map((logo, idx) =>
                 logo.url ? (
