@@ -95,57 +95,111 @@ const Contact = () => {
   );
 };
 
+// const Projects = () => {
+//   return (
+//     <div className="section">
+//       <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
+//         <div className="relative flex-1 text-center lg:text-right">
+//           <h1 className="text-4xl md:text-6xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
+//             projects.
+//           </h1>
+//           <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
+//             {`sharing some of my collaborative endeavors.`}
+//           </p>
+//         </div>
+//         <div className="flex-4 grid grid-cols-3 gap-y-4 md:px-16">
+//           {!!projectLogos.length &&
+//             projectLogos.map((logo, idx) =>
+//               !logo.url ? (
+//                 <div className="flex" key={`${logo.alt}-${idx}`}>
+//                   <Image
+//                     src={`/logos/projects/${logo.image}`}
+//                     className={`grayscale flex-1 md:p-4 ${
+//                       logo.classes ? logo.classes : "brightness-[500]"
+//                     }`}
+//                     width="200"
+//                     height="100"
+//                     alt={`${logo.alt}`}
+//                   />
+//                 </div>
+//               ) : (
+//                 <Link
+//                   key={`${logo.alt}-${idx}`}
+//                   href={logo.url}
+//                   className="flex"
+//                 >
+//                   <Image
+//                     src={`/logos/projects/${logo.image}`}
+//                     className={`grayscale flex-1 md:p-4 p-0 cursor-pointer ${
+//                       logo.classes ? logo.classes : "brightness-[500]"
+//                     }`}
+//                     width="200"
+//                     height="100"
+//                     alt={`${logo.alt}`}
+//                   />
+//                 </Link>
+//               )
+//             )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
 const Projects = () => {
   return (
     <div className="section">
-      <div className="container px-4 mx-auto flex lg:flex-row-reverse flex-col gap-10 justify-center items-center">
-        <div className="relative flex-1 text-center lg:text-right">
-          <h1 className="text-4xl md:text-6xl drop-shadow-2xl lg:text-8xl text-primary font-bold mb-2 tracking-wide">
-            projects.
-          </h1>
-          <p className="text-md lg:text-4xl tracking-wider text-white leading-relaxed">
-            {`sharing some of my collaborative endeavors.`}
-          </p>
+      <div className="container px-4 mx-auto grid grid-cols-1 lg:grid-cols-10 gap-10 items-center">
+        <div className="col-span-1 lg:col-span-7">
+          <div className="grid grid-cols-3 px-4 md:px-16">
+            {!!projectLogos.length &&
+              projectLogos.map((logo, idx) =>
+                !logo.url ? (
+                  <div className="flex" key={`${logo.alt}-${idx}`}>
+                    <Image
+                      src={`/logos/projects/${logo.image}`}
+                      className={`grayscale flex-1 md:p-4 ${
+                        logo.classes ? logo.classes : "brightness-[500]"
+                      }`}
+                      width="200"
+                      height="100"
+                      alt={`${logo.alt}`}
+                    />
+                  </div>
+                ) : (
+                  <Link
+                    key={`${logo.alt}-${idx}`}
+                    href={logo.url}
+                    className="flex"
+                  >
+                    <Image
+                      src={`/logos/projects/${logo.image}`}
+                      className={`grayscale flex-1 md:p-4 p-0 cursor-pointer ${
+                        logo.classes ? logo.classes : "brightness-[500]"
+                      }`}
+                      width="200"
+                      height="100"
+                      alt={`${logo.alt}`}
+                    />
+                  </Link>
+                )
+              )}
+          </div>
         </div>
-        <div className="flex-4 grid grid-cols-3 gap-y-4 md:px-16">
-          {!!projectLogos.length &&
-            projectLogos.map((logo, idx) =>
-              !logo.url ? (
-                <div className="flex" key={`${logo.alt}-${idx}`}>
-                  <Image
-                    src={`/logos/projects/${logo.image}`}
-                    className={`grayscale flex-1 md:p-4 ${
-                      logo.classes ? logo.classes : "brightness-[500]"
-                    }`}
-                    width="200"
-                    height="100"
-                    alt={`${logo.alt}`}
-                  />
-                </div>
-              ) : (
-                <Link
-                  key={`${logo.alt}-${idx}`}
-                  href={logo.url}
-                  className="flex"
-                >
-                  <Image
-                    src={`/logos/projects/${logo.image}`}
-                    className={`grayscale flex-1 md:p-4 p-0 cursor-pointer ${
-                      logo.classes ? logo.classes : "brightness-[500]"
-                    }`}
-                    width="200"
-                    height="100"
-                    alt={`${logo.alt}`}
-                  />
-                </Link>
-              )
-            )}
+        <div className="col-span-1 lg:col-span-3">
+          <div className="text-center w-full lg:text-right">
+            <h1 className="text-4xl md:text-6xl drop-shadow-2xl xl:text-8xl text-primary font-bold mb-2 tracking-wide">
+              projects.
+            </h1>
+            <p className="text-lg lg:text-2xl tracking-wider text-white lg:!leading-[3rem]">
+              {`Sharing some of my collaborative endeavors.`}
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
-
 const Tech = () => {
   return (
     <div className="section">
@@ -161,7 +215,7 @@ const Tech = () => {
           </div>
         </div>
         <div className="col-span-1 lg:col-span-7">
-          <div className="grid grid-cols-3 md:grid-cols-4 px-4 md:px-16">
+          <div className="grid grid-cols-3 px-4 md:px-16">
             {!!techLogos.length &&
               techLogos.map((logo, idx) =>
                 logo.url ? (
