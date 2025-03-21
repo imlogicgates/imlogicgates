@@ -47,11 +47,11 @@ export const techLogos = [
   {
     image: "next.svg",
     alt: "NextJS",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
   {
     image: "vercel.svg",
     alt: "Vercel",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
 ];
