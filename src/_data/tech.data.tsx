@@ -12,7 +12,7 @@ export const techLogos = [
   {
     image: "angular.svg",
     alt: "NextJS",
-    url: "",
+    url: "https://www.testdome.com/certificates/2effcfabbc6a41fd83811363a635caf5",
   },
   {
     image: "js.svg",
@@ -25,9 +25,19 @@ export const techLogos = [
     url: "https://www.testdome.com/certificates/e0be89e891f54e08b5c830f150e48aad",
   },
   {
+    image: "github.svg",
+    alt: "GitHub",
+    url: "https://www.testdome.com/certificates/e6b1ad7129e540b99fc0d08aa1f5b3ca",
+  },
+  {
     image: "react.svg",
     alt: "React",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
+  },
+  {
+    image: "react-native.svg",
+    alt: "React Native",
+    url: "https://www.testdome.com/certificates/78b763b1433f458ead1e29521e8bad34",
   },
   {
     image: "sql.svg",
@@ -35,23 +45,18 @@ export const techLogos = [
     url: "https://www.testdome.com/certificates/db6daa553f4a460b8d53b88da4b1baf8",
   },
   {
-    image: "github.svg",
-    alt: "NextJS",
-    url: "",
-  },
-  {
     image: "api.svg",
-    alt: "API",
-    url: "",
+    alt: "Rest API",
+    url: "https://www.testdome.com/certificates/340463b95f4545838e67857196afe9f3",
   },
   {
     image: "next.svg",
     alt: "NextJS",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
   {
     image: "vercel.svg",
     alt: "Vercel",
-    url: "",
+    url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
 ];

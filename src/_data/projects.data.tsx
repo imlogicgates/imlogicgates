@@ -6,6 +6,12 @@ export const projectLogos = [
     classes: "brightness-[500] px-0",
   },
   {
+    image: "fanatics.svg",
+    alt: "Fanatics Collect",
+    url: "https://www.fanaticscollect.com/",
+    classes: "brightness-[500] px-0",
+  },
+  {
     image: "maison-berger-ph.svg",
     alt: "Maison Berger",
     classes: "brightness-[500] px-4 md:px-8",
