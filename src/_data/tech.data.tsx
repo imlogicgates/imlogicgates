@@ -36,8 +36,8 @@ export const techLogos = [
   },
   {
     image: "github.svg",
-    alt: "NextJS",
-    url: "",
+    alt: "GitHub",
+    url: "https://www.testdome.com/certificates/e6b1ad7129e540b99fc0d08aa1f5b3ca",
   },
   {
     image: "api.svg",
