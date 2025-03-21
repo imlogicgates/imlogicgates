@@ -15,7 +15,7 @@ export const projectLogos = [
     image: "maison-berger-ph.svg",
     alt: "Maison Berger",
     classes: "brightness-[500] px-4 md:px-8",
-    url: "https://maison-berger.ph/",
+    url: "https://maison-berger.com/",
   },
   {
     image: "activelamp.svg",
@@ -39,7 +39,7 @@ export const projectLogos = [
     image: "doyo.svg",
     alt: "Doyo",
     classes: "brightness-[500] px-4 md:px-8",
-    url: "https://stage-app.getdoyo.com/",
+    url: "https://getdoyo.app/",
   },
   {
     image: "rentatee.png",
