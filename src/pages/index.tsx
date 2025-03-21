@@ -31,13 +31,13 @@ const Hero = () => {
     <section className="overflow-hidden flex items-center justify-center w-full h-screen snap-start relative">
       <div className="container overflow-hidden mx-auto px-4 h-full flex flex-col-reverse justify-evenly align-middle">
         <div className="flex flex-col items-center justify-center gap-y-2 max-h-3/4">
-          <h1 className="text-2xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
+          <h1 className="text-3xl md:text-4xl lg:text-7xl text-primary font-bold my-2 tracking-wide">
             <span className="text-white font-bold">{`<`}</span>
             imlogicgates
             <span className="text-white font-bold">{`/>`}</span>
           </h1>
 
-          <p className="text-xl text-center lg:text-3xl pb-1 text-white  tracking-wider">
+          <p className="text-xl text-center md:text-2xl lg:text-3xl pb-1 text-white  tracking-wider">
             Architecting digital solutions that
             <br className="hidden sm:block" /> accelerate
             <span className="text-primary font-bold"> business success.</span>
