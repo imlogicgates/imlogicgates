@@ -30,7 +30,7 @@ export const techLogos = [
     url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },
   {
-    image: "react.svg",
+    image: "react-native.svg",
     alt: "React Native",
     url: "https://www.testdome.com/certificates/546ca9afa9104755b51e26ec059c0bb7",
   },

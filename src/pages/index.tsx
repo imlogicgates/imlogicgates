@@ -171,7 +171,7 @@ const Tech = () => {
                 >
                   <Image
                     src={`/logos/tech/${logo.image}`}
-                    className="invert flex-1 p-4 md:p-10 cursor-pointer"
+                    className="brightness-0 invert flex-1 p-4 md:p-10 cursor-pointer"
                     width="100"
                     height="50"
                     alt={`${logo.alt}`}
