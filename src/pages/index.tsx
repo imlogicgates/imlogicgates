@@ -1,10 +1,26 @@
 import { projectLogos, techLogos } from "@/_data";
-import { Player } from "@lottiefiles/react-lottie-player";
+import dynamic from "next/dynamic";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Code from "../_animations/code.json";
 import Programmer from "../_animations/programmer.json";
 import WindLine from "../_animations/wind-line.json";
+
+// Dynamically import the Lottie Player to avoid SSR issues
+const Player = dynamic(
+  () =>
+    import("@lottiefiles/react-lottie-player").then((mod) => ({
+      default: mod.Player,
+    })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-64 h-64 bg-gray-200 animate-pulse rounded-lg" />
+    ),
+  }
+);
+
 const SocialLinks = () => {
   return (
     <>
@@ -191,11 +207,20 @@ const Skills = () => {
 
 export default function Home() {
   return (
-    <main className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
-      <Hero />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <>
+      <Head>
+        <title>Imlogicgates | Software Development</title>
+        <meta
+          name="description"
+          content="Architecting digital solutions that accelerate business success."
+        />
+      </Head>
+      <main className="max-h-screen overflow-y-scroll snap snap-y snap-mandatory">
+        <Hero />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </>
   );
 }
