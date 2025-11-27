@@ -30,7 +30,7 @@ export const projectLogos = [
     url: "https://jetpack.to/",
   },
   {
-    image: "sproutsheet.png",
+    image: "pickmart.svg",
     alt: "PickMart",
     classes: "brightness-[500] px-8 md:px-8 xl:px-14",
     url: "https://pickmart.ph/",
