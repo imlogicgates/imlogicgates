@@ -2,7 +2,7 @@ export const projectLogos = [
   {
     image: "therma.svg",
     alt: "Therma",
-    url: "https://www.hellotherma.com",
+    url: "https://www.glaciergrid.com/",
     classes: "brightness-[500] px-0",
   },
   {
@@ -28,6 +28,12 @@ export const projectLogos = [
     alt: "Jetpack",
     classes: "brightness-[500] px-8 md:px-10 xl:px-16",
     url: "https://jetpack.to/",
+  },
+  {
+    image: "sproutsheet.png",
+    alt: "PickMart",
+    classes: "brightness-[500] px-8 md:px-8 xl:px-14",
+    url: "https://pickmart.ph/",
   },
   {
     image: "doyo.svg",
