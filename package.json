@@ -13,12 +13,12 @@
     "@fullpage/react-fullpage": "^0.1.39",
     "@lottiefiles/react-lottie-player": "^3.5.3",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.35",
-    "@types/react-dom": "18.0.11",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "autoprefixer": "10.4.14",
     "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
-    "next": "13.3.0",
+    "eslint-config-next": "16.0.10",
+    "next": "16.0.10",
     "postcss": "8.4.22",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -28,5 +28,9 @@
     "eslint-config-prettier": "^8.8.0",
     "prettier": "2.8.8",
     "tailwindcss": "^3.4.1"
+  },
+  "overrides": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }
